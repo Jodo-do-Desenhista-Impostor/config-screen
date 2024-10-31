@@ -22,7 +22,9 @@ export default function Root(props) {
   useEffect(() => {
     if (!isInitialized) {
       const storedPlayers = localStorage.getItem("jogo_do_impostor_players");
-      const storedImpostors = localStorage.getItem("jogo_do_impostor_impostors");
+      const storedImpostors = localStorage.getItem(
+        "jogo_do_impostor_impostors"
+      );
 
       if (storedPlayers) {
         setPlayers(storedPlayers.split(","));
@@ -45,7 +47,7 @@ export default function Root(props) {
 
   const deletePlayer = (indexToDelete) => {
     setPlayers(players.filter((_, index) => index !== indexToDelete));
-  }
+  };
 
   const startGame = () => {
     localStorage.setItem("jogo_do_impostor_players", String(players));
