@@ -10,13 +10,31 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function Root(props) {
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState("");
   const [impostors, setImpostors] = useState(1);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    if (!isInitialized) {
+      const storedPlayers = localStorage.getItem("jogo_do_impostor_players");
+      const storedImpostors = localStorage.getItem("jogo_do_impostor_impostors");
+
+      if (storedPlayers) {
+        setPlayers(storedPlayers.split(","));
+      }
+
+      if (storedImpostors) {
+        setImpostors(Number(storedImpostors));
+      }
+
+      setIsInitialized(true);
+    }
+  }, [isInitialized]);
 
   const handleAddPlayer = () => {
     if (newPlayer.trim() && !players.includes(newPlayer.trim())) {
@@ -58,7 +76,7 @@ export default function Root(props) {
           label="Número de Impostores"
           variant="outlined"
           type="number"
-          defaultValue={impostors}
+          value={impostors}
           onChange={(e) => setImpostors(Number(e.target.value))}
         />
         <List>
