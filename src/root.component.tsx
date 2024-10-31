@@ -39,9 +39,9 @@ export default function Root(props) {
   return (
     <Container>
       <Paper elevation={3} sx={{ p: 2 }}>
-        <Typography variant="h4">Jogo do Impostor</Typography>
+        <Typography variant="h5">Jogo do Desenhista Impostor</Typography>
         <br></br>
-        <Typography variant="h5">Configurar Jogo</Typography>
+        <Typography variant="h6">Configurar Jogo</Typography>
         <br></br>
         <Box sx={{ display: "flex", gap: 1, mb: 3 }}>
           <TextField
