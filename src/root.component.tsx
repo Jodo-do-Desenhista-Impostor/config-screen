@@ -25,6 +25,10 @@ export default function Root(props) {
     }
   };
 
+  const deletePlayer = (indexToDelete) => {
+    setPlayers(players.filter((_, index) => index !== indexToDelete));
+  }
+
   const startGame = () => {
     localStorage.setItem("jogo_do_impostor_players", String(players));
     localStorage.setItem("jogo_do_impostor_impostors", String(impostors));
@@ -62,7 +66,7 @@ export default function Root(props) {
             <ListItem
               key={index}
               secondaryAction={
-                <IconButton edge="end">
+                <IconButton edge="end" onClick={() => deletePlayer(index)}>
                   <DeleteIcon />
                 </IconButton>
               }
