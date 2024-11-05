@@ -107,23 +107,21 @@ export default function Root(props) {
       <br></br>
 
       <Paper elevation={3} sx={{ p: 2 }}>
-        <p>O Desenhista Impostor é um jogo onde jogadores trabalham juntos para criar um desenho baseado em uma palavra secreta, enquanto um impostor tenta se passar por um jogador regular sem conhecer a palavra.</p>
+        <p>
+          O Desenhista Impostor é um jogo onde jogadores trabalham juntos para
+          criar um desenho baseado em uma palavra secreta, enquanto um impostor
+          tenta se passar por um jogador regular sem conhecer a palavra.
+        </p>
 
         <Typography variant="h6">Preparação do jogo:</Typography>
         <ul>
           <li>Mínimo de 3 jogadores.</li>
-          <li>
-            Cadastre os nomes dos jogadores no app
-          </li>
+          <li>Cadastre os nomes dos jogadores no app</li>
           <li>
             O sistema irá:
             <ul>
-              <li>
-                Sortear aleatoriamente um impostor
-              </li>
-              <li>
-                Distribuir uma palavra secreta para os demais jogadores
-              </li>
+              <li>Sortear aleatoriamente um impostor</li>
+              <li>Distribuir uma palavra secreta para os demais jogadores</li>
             </ul>
           </li>
         </ul>
@@ -147,18 +145,18 @@ export default function Root(props) {
             <h3>Fase de Votação</h3>
             <ul>
               <li>
-                Ao final de uma (ou mais) rodada(s), todos votam em quem acham ser o impostor
+                Ao final de uma (ou mais) rodada(s), todos votam em quem acham
+                ser o impostor
               </li>
-              <li>
-                Quem receber mais votos é eliminado
-              </li>
+              <li>Quem receber mais votos é eliminado</li>
             </ul>
           </li>
           <li>
             <h3>Condições de Vitória</h3>
             <ul>
               <li>
-                <b>Jogadores Regulares vencem se:</b> Identificarem corretamente o impostor
+                <b>Jogadores Regulares vencem se:</b> Identificarem corretamente
+                o impostor
               </li>
               <li>
                 <b>Impostor vence se:</b> Adivinhar a palavra correta
