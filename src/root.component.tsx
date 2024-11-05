@@ -107,23 +107,31 @@ export default function Root(props) {
       <br></br>
 
       <Paper elevation={3} sx={{ p: 2 }}>
-        <Typography variant="h6">Regras:</Typography>
-        <ol>
+        <p>O Desenhista Impostor é um jogo onde jogadores trabalham juntos para criar um desenho baseado em uma palavra secreta, enquanto um impostor tenta se passar por um jogador regular sem conhecer a palavra.</p>
+
+        <Typography variant="h6">Preparação do jogo:</Typography>
+        <ul>
+          <li>Mínimo de 3 jogadores.</li>
           <li>
-            <h3>Preparação do jogo:</h3>
+            Cadastre os nomes dos jogadores no app
+          </li>
+          <li>
+            O sistema irá:
             <ul>
-              <li>Mínimo de 3 jogadores.</li>
               <li>
-                Um jogador é sorteado como impostor e mantém sua identidade
-                secreta.
+                Sortear aleatoriamente um impostor
               </li>
               <li>
-                Todos, exceto o impostor, recebem uma palavra para desenhar.
+                Distribuir uma palavra secreta para os demais jogadores
               </li>
             </ul>
           </li>
+        </ul>
+
+        <Typography variant="h6">Regras:</Typography>
+        <ol>
           <li>
-            <h3>Durante o desenho:</h3>
+            <h3>Fase de Desenho</h3>
             <ul>
               <li>
                 Cada jogador faz um traço no desenho no seu turno, sem falar ou
@@ -136,18 +144,24 @@ export default function Root(props) {
             </ul>
           </li>
           <li>
-            <h3>Fim da rodada:</h3>
+            <h3>Fase de Votação</h3>
             <ul>
               <li>
-                A qualquer momento, qualquer jogador pode começar uma votação
-                para expulsar alguém suspeito.
+                Ao final de uma (ou mais) rodada(s), todos votam em quem acham ser o impostor
               </li>
               <li>
-                Se o impostor é expulso, os jogadores regulares vencem, se um
-                jogador regular for expulso o jogo pode continuar.
+                Quem receber mais votos é eliminado
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>Condições de Vitória</h3>
+            <ul>
+              <li>
+                <b>Jogadores Regulares vencem se:</b> Identificarem corretamente o impostor
               </li>
               <li>
-                Se o impostor advinha o que está sendo desenhado, ele vence.
+                <b>Impostor vence se:</b> Adivinhar a palavra correta
               </li>
             </ul>
           </li>
